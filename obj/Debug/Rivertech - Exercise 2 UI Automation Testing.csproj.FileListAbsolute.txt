@@ -1,19 +1,27 @@
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\NUnit.VisualStudio.TestAdapter.dll
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Mono.Cecil.dll
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Mono.Cecil.Mdb.dll
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Mono.Cecil.Pdb.dll
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Mono.Cecil.Rocks.dll
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\nunit.core.dll
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\nunit.core.interfaces.dll
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\nunit.util.dll
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Rivertech - Exercise 2 UI Automation Testing.exe.config
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Rivertech - Exercise 2 UI Automation Testing.exe
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\obj\Debug\Rivertech - Exercise 2 UI Automation Testing.csproj.CoreCompileInputs.cache
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\nunit.engine.dll
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\nunit.engine.api.dll
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\nunit.engine.core.dll
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\testcentric.engine.metadata.dll
 C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Rivertech - Exercise 2 UI Automation Testing.pdb
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.Core.dll
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.Framework.dll
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.NUnit3.dll
 C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\nunit.framework.dll
 C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\WebDriver.dll
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.Core.pdb
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.Core.xml
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.Framework.pdb
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.Framework.xml
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.NUnit3.pdb
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\LightBDD.NUnit3.xml
 C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\nunit.framework.xml
 C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\obj\Debug\Rivertech - Exercise 2 UI Automation Testing.csproj.AssemblyReference.cache
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\obj\Debug\Rivertech - Exercise 2 UI Automation Testing.csproj.CoreCompileInputs.cache
 C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\obj\Debug\Rivertech - Exercise 2 UI Automation Testing.csproj.CopyComplete
-C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\obj\Debug\Rivertech - Exercise 2 UI Automation Testing.exe
 C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\obj\Debug\Rivertech - Exercise 2 UI Automation Testing.pdb
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Rivertech - Exercise 2 UI Automation Testing.exe.config
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\bin\Debug\Rivertech - Exercise 2 UI Automation Testing.exe
+C:\Users\Alistair Azzopardi\source\repos\Rivertech - Exercise 2 UI Automation Testing\Rivertech-Exercise2\obj\Debug\Rivertech - Exercise 2 UI Automation Testing.exe
