@@ -9,9 +9,9 @@ namespace Rivertech___Exercise_2_UI_Automation_Testing
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            WebsiteController.OpenWebsite();
+           // WebsiteController.OpenWebsite();
 
         }
     }

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rivertech - Exercise 2 UI Automation Testing", "Rivertech - Exercise 2 UI Automation Testing.csproj", "{C7680E5E-F04D-47CC-86B7-3A1D423A793F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RiverTech - Exercise 1 (Web API)", "..\..\RiverTech-Exercise1\RiverTech - Exercise 1 (Web API).csproj", "{58E47EAF-424E-49A3-B993-E33A7B9FD739}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{C7680E5E-F04D-47CC-86B7-3A1D423A793F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7680E5E-F04D-47CC-86B7-3A1D423A793F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7680E5E-F04D-47CC-86B7-3A1D423A793F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E47EAF-424E-49A3-B993-E33A7B9FD739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E47EAF-424E-49A3-B993-E33A7B9FD739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E47EAF-424E-49A3-B993-E33A7B9FD739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E47EAF-424E-49A3-B993-E33A7B9FD739}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
