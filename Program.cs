@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rivertech___Exercise_2_UI_Automation_Testing.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Rivertech___Exercise_2_UI_Automation_Testing
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
         }
     }
