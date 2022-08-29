@@ -5,114 +5,138 @@ using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Rivertech___Exercise_2_UI_Automation_Testing.Controllers
 {
-   
+
 
     public class WebsiteController
     {
-        private static IWebDriver _driver;
-        public static bool isInitialised;
-        private static readonly string url = "https://www.saucedemo.com/";
-        public static IWebDriver Driver { get => _driver; set => _driver = value; }
+        private bool isInitialised;
+        private static IWebDriver _driver { get => ReferenceManager.Instance.Driver; set => ReferenceManager.Instance.Driver = value; }
+        private IDictionary<WebsitePages, string> websitePages;
 
-        public static void InitialiseDriver()
+        private void InitialiseDriver()
         {
             if (isInitialised)
             {
                 return;
             }
 
-            _driver = new ChromeDriver("C:\\Users\\Alistair Azzopardi\\source\\repos\\Rivertech - Exercise 2 UI Automation Testing\\Rivertech-Exercise2\\chromedriver");
+            var basePath = System.AppDomain.CurrentDomain.BaseDirectory;
+            _driver = new ChromeDriver(basePath + @"../../chromedriver");
             isInitialised = true;
         }
 
-      
+        public WebsiteController()
+        {
+            PopulateWebsitePagesDictionary();
+        }
+
+        private void PopulateWebsitePagesDictionary()
+        {
+            websitePages = new Dictionary<WebsitePages, string>();
+
+            websitePages.Add(WebsitePages.Home, "https://www.saucedemo.com/");
+            websitePages.Add(WebsitePages.Products, "https://www.saucedemo.com/inventory.html");
+            websitePages.Add(WebsitePages.Cart, "https://www.saucedemo.com/cart.html");
+            websitePages.Add(WebsitePages.CustomerDetails, "https://www.saucedemo.com/checkout-step-one.html");
+            websitePages.Add(WebsitePages.CheckoutProductList, "https://www.saucedemo.com/checkout-step-two.html");
+            websitePages.Add(WebsitePages.OrderConfirmation, "https://www.saucedemo.com/checkout-complete.html");
+        }
 
         [SetUp]
-        public static void OpenWebsite()
+        private void OpenWebsite(WebsitePages pageToNavigate)
         {
             InitialiseDriver();
-            _driver.Url = url;
+            _driver.Url = websitePages[pageToNavigate];
             _driver.Manage().Window.Maximize();
         }
 
-        public static void InsertLoginCredentials()
+        public void InsertLoginCredentials()
         {
-            if (!isInitialised)
-            {
-                OpenWebsite();
-            }
+            OpenWebsite(WebsitePages.Home);
 
             //setup username
-            IWebElement usernameTextBox = _driver.FindElement(By.Id("user-name"));
+            IWebElement usernameTextBox = GetWebElementById("user-name");
             usernameTextBox.Clear();
             usernameTextBox.SendKeys("standard_user");
 
 
             //setup password
-            IWebElement passwordTextBox = _driver.FindElement(By.Id("password"));
+            IWebElement passwordTextBox = GetWebElementById("password");
             passwordTextBox.Clear();
-            passwordTextBox.SendKeys("secret_sauce");        
+            passwordTextBox.SendKeys("secret_sauce");
         }
 
-        public static void SimulateLoginClick()
+        public void SimulateLoginClick()
         {
             //click on login
-            IWebElement loginButton = _driver.FindElement(By.Id("login-button"));
+            IWebElement loginButton = GetWebElementById("login-button");
             loginButton.Click();
         }
 
-
-        public static void AddItemToCart()
+        public void AddItemToCart()
         {
-            IWebElement addFleeceJacketToCartButton = _driver.FindElement(By.Id("add-to-cart-sauce-labs-fleece-jacket"));
+            OpenWebsite(WebsitePages.Products);
+
+            IWebElement addFleeceJacketToCartButton = GetWebElementById("add-to-cart-sauce-labs-fleece-jacket");
             addFleeceJacketToCartButton.Click();
         }
 
-        public static void ViewCart()
+        public void ViewCart()
         {
-            IWebElement viewCartButton = _driver.FindElement(By.Id("shopping_cart_container"));
+            IWebElement viewCartButton = GetWebElementById("shopping_cart_container");
             viewCartButton.Click();
         }
 
-        public static void Checkout()
+        public void Checkout()
         {
-            IWebElement checkoutButton = _driver.FindElement(By.Id("checkout"));
+            IWebElement checkoutButton = GetWebElementById("checkout");
             checkoutButton.Click();
         }
 
-        public static void InputCustomerDetails()
+        public void InputCustomerDetails()
         {
             //first name
-            IWebElement firstNameTextBox = _driver.FindElement(By.Id("first-name"));
+            IWebElement firstNameTextBox = GetWebElementById("first-name");
             firstNameTextBox.Clear();
             firstNameTextBox.SendKeys("John");
 
             //last name
-            IWebElement LastNameTextBox = _driver.FindElement(By.Id("last-name"));
+            IWebElement LastNameTextBox = GetWebElementById("last-name");
             LastNameTextBox.Clear();
             LastNameTextBox.SendKeys("Doe");
 
             //postal code
-            IWebElement postalCodeTextBox = _driver.FindElement(By.Id("postal-code"));
+            IWebElement postalCodeTextBox = GetWebElementById("postal-code");
             postalCodeTextBox.Clear();
             postalCodeTextBox.SendKeys("JDR1234");
         }
 
-        public static void ContinueButton()
+        public void ContinueButton()
         {
-            IWebElement continueButton = _driver.FindElement(By.Id("continue"));
+            IWebElement continueButton = GetWebElementById("continue");
             continueButton.Click();
         }
 
-        public static void FinishCheckout()
+        public void FinishCheckout()
         {
-            IWebElement finishButton = _driver.FindElement(By.Id("finish"));
+            IWebElement finishButton = GetWebElementById("finish");
             finishButton.Click();
+        }
+
+        public IWebElement GetWebElementById(string elementId)
+        {
+            return _driver.FindElement(By.Id(elementId));
+        }
+
+        public IWebElement GetWebElementByClass(string className)
+        {
+            return _driver.FindElement(By.ClassName(className));
         }
     }
 }

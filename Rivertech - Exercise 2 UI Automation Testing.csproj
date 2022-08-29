@@ -81,6 +81,7 @@
     <Compile Include="Controllers\WebsiteController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceManager.cs" />
     <Compile Include="TestScenarios\WebsiteFeature.cs" />
     <Compile Include="TestScenarios\WebsiteFeatureSteps.cs" />
   </ItemGroup>

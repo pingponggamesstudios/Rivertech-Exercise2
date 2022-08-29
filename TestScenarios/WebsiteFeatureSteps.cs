@@ -10,14 +10,15 @@ namespace Rivertech___Exercise_2_UI_Automation_Testing.TestScenarios
 {
     public partial class WebsiteFeatureSteps : FeatureFixture
     {
+        private WebsiteController _websiteController { get => ReferenceManager.Instance.websiteController; }
+        private IWebDriver _driver { get => ReferenceManager.Instance.Driver; set => ReferenceManager.Instance.Driver = value; }
+
         public void Given_Credentials_are_Inserted()
         {
-            WebsiteController.InsertLoginCredentials();
-
-            var _driver = WebsiteController.Driver;
-
-            IWebElement usernameTextBox = _driver.FindElement(By.Id("user-name"));
-            IWebElement passwordTextBox = _driver.FindElement(By.Id("password"));
+            _websiteController.InsertLoginCredentials();
+            
+            IWebElement usernameTextBox = _websiteController.GetWebElementById("user-name");
+            IWebElement passwordTextBox = _websiteController.GetWebElementById("password");
 
             //wait for field to be filled in, incase of slow connection
             WebDriverWait w = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
@@ -29,63 +30,58 @@ namespace Rivertech___Exercise_2_UI_Automation_Testing.TestScenarios
 
         public void When_Credentials_Are_Correct_User_Can_Login()
         {
-            var _driver = WebsiteController.Driver;
-
-            WebsiteController.SimulateLoginClick();
+            _websiteController.SimulateLoginClick();
 
             //check if title element exists
-            IWebElement titleText = _driver.FindElement(By.ClassName("title"));
+            IWebElement titleText = _websiteController.GetWebElementByClass("title");
             Assert.IsNotNull(titleText);
         }
 
         public void When_Adding_Object_To_Cart()
         {
-            WebsiteController.AddItemToCart();
+            _websiteController.AddItemToCart();
 
             //check if the badge has been added to the icon, upon adding an item to the cart
-            var _driver = WebsiteController.Driver;
             WebDriverWait w = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
             w.Until(ExpectedConditions.ElementIsVisible(By.ClassName("shopping_cart_badge")));
 
-            Assert.IsNotNull(_driver.FindElement(By.ClassName("shopping_cart_badge")));
+            Assert.IsNotNull(_websiteController.GetWebElementByClass("shopping_cart_badge"));
         }
 
         public void When_Viewing_Cart()
         {
-            WebsiteController.ViewCart();
+            _websiteController.ViewCart();
 
-            var _driver = WebsiteController.Driver;
-            Assert.IsNotNull(_driver.FindElement(By.Id("checkout")));
+            Assert.IsNotNull(_websiteController.GetWebElementById("checkout"));
 
-            IWebElement cartQuantityText = _driver.FindElement(By.ClassName("cart_quantity"));
+            IWebElement cartQuantityText = _websiteController.GetWebElementByClass("cart_quantity");
             Assert.IsNotNull(cartQuantityText);
             Assert.IsTrue(cartQuantityText.Text == "1");
         }
 
         public void When_Checkout_Is_Clicked()
         {
-            WebsiteController.Checkout();
 
-            var _driver = WebsiteController.Driver;
+            _websiteController.Checkout();
 
-            WebsiteController.InputCustomerDetails();
-            IWebElement firstNameTextBox = _driver.FindElement(By.Id("first-name"));
-            IWebElement LastNameTextBox = _driver.FindElement(By.Id("last-name"));
-            IWebElement postalCodeTextBox = _driver.FindElement(By.Id("postal-code"));
+
+            _websiteController.InputCustomerDetails();
+            IWebElement firstNameTextBox = _websiteController.GetWebElementById("first-name");
+            IWebElement LastNameTextBox = _websiteController.GetWebElementById("last-name");
+            IWebElement postalCodeTextBox = _websiteController.GetWebElementById("postal-code");
 
             Assert.IsNotEmpty(firstNameTextBox.GetAttribute("value"));
             Assert.IsNotEmpty(LastNameTextBox.GetAttribute("value"));
             Assert.IsNotEmpty(postalCodeTextBox.GetAttribute("value"));
 
-            WebsiteController.ContinueButton();
+            _websiteController.ContinueButton();
         }
 
         public void Then_Confirm_Total_Price()
         {
-            var _driver = WebsiteController.Driver;
-            IWebElement summaryItemTotalElement = _driver.FindElement(By.ClassName("summary_subtotal_label"));
-            IWebElement summaryTaxElement = _driver.FindElement(By.ClassName("summary_tax_label"));
-            IWebElement summaryTotalIncludingTaxElement = _driver.FindElement(By.ClassName("summary_total_label"));
+            IWebElement summaryItemTotalElement = _websiteController.GetWebElementByClass("summary_subtotal_label");
+            IWebElement summaryTaxElement = _websiteController.GetWebElementByClass("summary_tax_label");
+            IWebElement summaryTotalIncludingTaxElement = _websiteController.GetWebElementByClass("summary_total_label");
             Assert.IsTrue(summaryItemTotalElement.Text.Contains("49.99"));
             Assert.IsTrue(summaryTaxElement.Text.Contains("4.00"));
             Assert.IsTrue(summaryTotalIncludingTaxElement.Text.Contains("53.99"));
@@ -94,16 +90,14 @@ namespace Rivertech___Exercise_2_UI_Automation_Testing.TestScenarios
 
         public void Then_Finish_Checkout_Process()
         {
-            var _driver = WebsiteController.Driver;
-
             WebDriverWait w = new WebDriverWait(_driver, TimeSpan.FromSeconds(5));
             w.Until(ExpectedConditions.ElementIsVisible(By.Id("finish")));
 
-            WebsiteController.FinishCheckout();
+            _websiteController.FinishCheckout();
 
             try
             {
-                Assert.IsNull(_driver.FindElement(By.ClassName("shopping_cart_badge")));
+                Assert.IsNull(_websiteController.GetWebElementByClass("shopping_cart_badge"));
             }
             catch (Exception e)
             {

@@ -9,7 +9,7 @@ namespace Rivertech___Exercise_2_UI_Automation_Testing.TestScenarios
    public partial class WebsiteFeature : WebsiteFeatureSteps
     {
         [Scenario]
-        public void Perform_Login_and_CheckOut()
+        public void Perform_Sucessful_Login()
         {
             Runner.AddSteps(
                      Given_Credentials_are_Inserted,

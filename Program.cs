@@ -11,8 +11,6 @@ namespace Rivertech___Exercise_2_UI_Automation_Testing
     {
         static void Main()
         {
-           // WebsiteController.OpenWebsite();
-
         }
     }
 }
